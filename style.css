@@ -1,0 +1,514 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- SECCIÓN HERO --- */
+/* --- SECCIÓN HERO --- */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    
+    /* ESTA ES LA LÍNEA CLAVE PARA EL CONTRASTE */
+    /* Crea un gradiente negro con 60% de opacidad (rgba(0,0,0,0.6)) sobre la imagen */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/principal.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    color: white; /* Todo el texto dentro será blanco */
+    display: flex;
+    flex-direction: column;
+}
+
+/* También haremos que la barra de navegación sea un poco más oscura para que resalte más el menú */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.4); /* Un fondo oscuro sutil para el menú */
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.3); /* Un poco de transparencia para la barra */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 50px; /* Ajusta el tamaño según tu logo */
+    height: auto;
+}
+
+.colegio-nombre {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Para que no se rompa en pantallas pequeñas */
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #4CAF50; /* Color verde al pasar el mouse */
+}
+
+/* --- CONTENIDO DEL HERO --- */
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.titulo-principal {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.titulo-secundario {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+/* Columnas de los estudiantes */
+.estudiantes-lista {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1); /* Fondo sutil */
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.estudiante-item {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* --- SECCIÓN SOBRE LOS ESTUDIANTES --- */
+.about-students {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.subtitulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #2c3e50;
+}
+
+.contenedor-integrantes {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.integrante-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* ¡Aquí está la magia! El elemento par se invierte (Imagen a la derecha) */
+.integrante-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.integrante-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Evita que la imagen se deforme */
+    border-radius: 50%; /* Si las quieres circulares, si las quieres cuadradas borra esta línea */
+    border: 4px solid #4CAF50;
+}
+
+.integrante-info {
+    flex: 1;
+}
+
+.integrante-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.integrante-info p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* --- SECCIÓN PLANTEAMIENTO Y OBJETIVOS --- */
+.problema-objetivos {
+    padding: 80px 20px;
+    background-color: #e8f5e9; /* Un fondo verde muy clarito para hacer contraste */
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta-inicio {
+    background-color: white;
+    max-width: 900px; /* Limita el ancho para que la lectura sea cómoda */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Sombra elegante */
+}
+
+.tarjeta-inicio h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.tarjeta-inicio h3 {
+    color: #4CAF50; /* El verde de nuestra temática */
+    font-size: 1.4rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-inicio p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    text-align: justify; /* Justificado para que luzca como un documento formal */
+}
+
+.tarjeta-inicio strong {
+    color: #2c3e50;
+}
+
+/* Estilo para la línea que separa las secciones */
+.separador {
+    border: none;
+    height: 2px;
+    background-color: #4CAF50;
+    margin: 40px 0;
+    opacity: 0.3;
+}
+
+/* Estilos limpios para la lista de objetivos específicos */
+.lista-objetivos {
+    margin-left: 40px;
+    margin-bottom: 20px;
+    color: #444;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.lista-objetivos li {
+    margin-bottom: 10px;
+}
+
+
+/* ========================================================= */
+/* MAGIA OSCURA PARA OCULTAR LA BARRA DE GOOGLE DEFINITIVAMENTE */
+/* ========================================================= */
+
+/* 1. Ocultar el iframe clásico y las nuevas clases extrañas que usa Google */
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-ZVi9od-lS1xne-wOHMyf {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* 2. Prevenir que Google empuje la página (afecta html y body) */
+html, body {
+    top: 0 !important;
+    margin-top: 0 !important;
+    position: static !important;
+}
+
+/* 3. Limpia el botón selector ocultando el texto "Con la tecnología de Google" */
+.goog-te-gadget {
+    color: transparent !important;
+    font-size: 0px;
+}
+.goog-te-gadget .goog-te-combo {
+    margin: 0;
+}
+
+/* 4. Evita el cuadro flotante molesto al pasar el mouse por el texto traducido */
+.goog-tooltip,
+.goog-tooltip:hover {
+    display: none !important;
+}
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important; 
+    box-shadow: none !important;
+}
+
+/* --- CONTENEDOR DEL TRADUCTOR --- */
+.traductor-container {
+    display: flex !important;
+    justify-content: flex-end !important; /* Esto lo obliga a ir a la derecha */
+    width: 100% !important;
+    padding: 10px 40px; 
+    box-sizing: border-box; /* Evita que el padding dañe el ancho */
+    position: relative;
+    z-index: 10;
+}
+
+/* Alineación interna por si Google intenta centrarlo */
+#google_translate_element {
+    text-align: right !important;
+    display: inline-block;
+}
+
+
+/* --- FONDOS ESPECÍFICOS POR MATERIA --- */
+.hero-biologia {
+    /* Fondo con imagen y filtro oscuro */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/biologiaV1.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    /* --- EL TRUCO PARA QUE SEA MÁS PEQUEÑO --- */
+    height: 65vh; /* Ocupa solo el 45% de la pantalla (casi la mitad) */
+    min-height: 350px; /* Reducimos el alto mínimo para que no se estire */
+}
+
+.hero-quimica {
+    /* Fondo con imagen de química y filtro oscuro */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/quimica.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    /* Mantenemos el tamaño tipo "banner" (mitad de pantalla) */
+    height: 65vh; 
+    min-height: 350px; 
+}
+
+.hero-matematica {
+    /* Fondo con imagen de química y filtro oscuro */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/matematicas.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    /* Mantenemos el tamaño tipo "banner" (mitad de pantalla) */
+    height: 65vh; 
+    min-height: 350px; 
+}
+
+.hero-fisica {
+    /* Fondo con imagen de química y filtro oscuro */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/fisica.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    /* Mantenemos el tamaño tipo "banner" (mitad de pantalla) */
+    height: 65vh; 
+    min-height: 350px; 
+}
+
+.hero-emprendimiento {
+    /* Fondo con imagen de química y filtro oscuro */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/emprendimiento.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    /* Mantenemos el tamaño tipo "banner" (mitad de pantalla) */
+    height: 65vh; 
+    min-height: 350px; 
+}
+
+
+.hero-educacion {
+    /* Fondo con imagen de química y filtro oscuro */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/educacion.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    /* Mantenemos el tamaño tipo "banner" (mitad de pantalla) */
+    height: 65vh; 
+    min-height: 350px; 
+}
+
+
+.hero-lengua {
+    /* Fondo con imagen de química y filtro oscuro */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/lengua.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    /* Mantenemos el tamaño tipo "banner" (mitad de pantalla) */
+    height: 65vh; 
+    min-height: 350px; 
+}
+
+
+/* ========================================================= */
+/* ESTILOS PARA EL CONTENIDO DE LAS MATERIAS (CANVA, PDFs)   */
+/* ========================================================= */
+
+.contenido-materia {
+    padding: 60px 20px;
+    background-color: #f4f7f6; /* Un gris muy sutil para resaltar la tarjeta blanca */
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-presentacion {
+    max-width: 1100px; /* Hace que ocupe gran parte de la pantalla */
+    width: 100%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Sombra elegante */
+}
+
+.titulo-figura {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.tema-presentacion {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+/* El truco mágico para que el iframe de Canva sea responsive (16:9) */
+.canva-embed-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Relación de aspecto 16:9 */
+    border-radius: 10px;
+    overflow: hidden; /* Corta los bordes para que queden redondeados */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    margin-bottom: 40px;
+}
+
+.canva-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Estilos para la sección de fuentes */
+.fuentes-seccion h4 {
+    font-size: 1.3rem;
+    color: #4CAF50; /* Verde temático */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4CAF50;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.lista-fuentes {
+    margin-left: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.lista-fuentes li {
+    margin-bottom: 8px;
+    word-break: break-all; /* Evita que enlaces largos dañen el diseño */
+}
+
+/* ========================================================= */
+/* ESTILOS PARA LA VISUALIZACIÓN DE PDF                      */
+/* ========================================================= */
+
+.seccion-pdf {
+    margin-top: 50px; /* Espacio para separar el botón del PDF */
+    border-top: 2px solid #e0e0e0; /* Una línea gris sutil de separación */
+    padding-top: 30px;
+}
+
+.subtitulo-preguntas {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.pdf-container {
+    width: 100%;
+    height: 600px; /* Altura ideal para leer en computadora */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Sombra igual a la de Canva */
+    background-color: #f9f9f9; /* Color de fondo por si el PDF tarda en cargar */
+}
+
+.pdf-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Ajuste automático para celulares */
+@media (max-width: 768px) {
+    .pdf-container {
+        height: 450px; /* Un poco más pequeño en pantallas móviles */
+    }
+}
+
+.youtube-embed-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Relación de aspecto 16:9 */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.youtube-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
