@@ -436,15 +436,12 @@ html, body {
     height: 100%;
     border: none;
 }
-
 /* Estilos para la sección de fuentes */
 .fuentes-seccion h4 {
     font-size: 1.3rem;
-    color: #4CAF50; /* Verde temático */
+    color: #000000; 
     margin-bottom: 15px;
-    border-bottom: 2px solid #4CAF50;
-    display: inline-block;
-    padding-bottom: 5px;
+    font-weight: bold; /* Asegura que el texto esté en negrillas */
 }
 
 .lista-fuentes {
