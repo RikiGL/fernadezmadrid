@@ -509,3 +509,84 @@ html, body {
     height: 100%;
     border: 0;
 }
+
+/* ========================================================= */
+/* ESTILOS PARA LA VISUALIZACIÓN DE EXCEL (GOOGLE SHEETS)    */
+/* ========================================================= */
+
+.seccion-excel {
+    margin-top: 50px; /* Separa el Excel del PDF que está arriba */
+    border-top: 2px solid #e0e0e0; /* Línea separadora elegante */
+    padding-top: 30px;
+}
+
+.excel-embed-container {
+    width: 100%;
+    height: 500px; /* Altura ideal para ver varias filas de Excel */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Misma sombra que el PDF */
+    background-color: #fff;
+}
+
+.excel-embed-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Ajuste automático para celulares */
+@media (max-width: 768px) {
+    .excel-embed-container {
+        height: 400px; /* Un poco más pequeño en móviles */
+    }
+}
+
+/* ========================================================= */
+/* ESTILOS PARA LOS GIFS EN EL PLANTEAMIENTO                 */
+/* ========================================================= */
+
+.contenido-dividido {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espacio entre el texto y el GIF */
+    margin-bottom: 25px;
+}
+
+/* Invierte el orden para el segundo bloque (GIF a la izquierda) */
+.contenido-dividido.reverso {
+    flex-direction: row-reverse;
+}
+
+.texto-problema {
+    flex: 1; /* El texto ocupa el espacio principal */
+}
+
+.gif-ilustrativo {
+    flex-basis: 40%; /* El GIF ocupa el 40% del ancho del contenedor */
+    text-align: center;
+}
+
+.imagen-gif {
+    max-width: 100%;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* Sombra elegante */
+    transition: transform 0.3s ease; /* Pequeño efecto al pasar el mouse */
+}
+
+.imagen-gif:hover {
+    transform: scale(1.03); /* Se agranda un poquito al pasar el mouse */
+}
+
+/* Diseño automático para celulares */
+@media (max-width: 768px) {
+    .contenido-dividido, 
+    .contenido-dividido.reverso {
+        flex-direction: column; /* En celulares se apila uno encima del otro */
+    }
+    
+    .gif-ilustrativo {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
